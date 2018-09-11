@@ -1,0 +1,31 @@
+<h3>Linked List: </h3>
+
+<div>
+  <p>Length: {{list.Count()}}</p>
+  <p>Size: {{list.Count()}}</p>
+  <p>Search Index: {{searchIndex}}</p>
+</div>
+<div *ngIf="list.Count() > 0">
+  <p>Items List:</p>
+  <span>
+    {{getListItems()}}
+  </span>
+</div>
+
+<div>
+  <p>Add an Item: </p>
+  <input #listAdd type="number" />
+  <button (click)="onAdd(+listAdd.value)">Add Item</button>
+</div>
+
+<div>
+  <p>Remove an Item: </p>
+  <input #listRemove type="number" />
+  <button (click)="onRemove(+listRemove.value)">Add Item</button>
+</div>
+
+<div>
+  <p>Find an Item: </p>
+  <input #listFind type="number" />
+  <button (click)="onSearch(+listFind.value)">Add Item</button>
+</div>

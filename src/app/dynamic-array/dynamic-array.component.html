@@ -1,0 +1,37 @@
+<h3>Dynamic Array: </h3>
+
+<div>
+  <p>Capacity: {{array.Capacity()}}</p>
+  <p>Size: {{array.Count()}}</p>
+  <p>Search Index: {{searchIndex}}</p>
+</div>
+<div *ngIf="array.Count() > 0">
+  <p>Items List:</p>
+  <span>
+    {{getArrayItems()}}
+  </span>
+</div>
+
+<div>
+  <p>Add an Item: </p>
+  <input #add type="number" />
+  <button (click)="onAdd(+add.value)">Add Item</button>
+</div>
+
+<div>
+  <p>Remove an Item: </p>
+  <input #remove type="number" />
+  <button (click)="onRemove(+remove.value)">Add Item</button>
+</div>
+
+<div>
+  <p>Remove All Matching Items: </p>
+  <input #removeAll type="number" />
+  <button (click)="onRemoveAllOccurences(+removeAll.value)">Add Item</button>
+</div>
+
+<div>
+  <p>Find an Item: </p>
+  <input #find type="number" />
+  <button (click)="onSearch(+find.value)">Add Item</button>
+</div>
